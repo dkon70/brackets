@@ -7,7 +7,7 @@ module.exports = function check(str, bracketsConfig) {
   for (let i = 0; i < str.length; i++) {
     if (str[i] === pair[stack[stack.length - 1]]) {
       stack.pop();
-    } else if (Object.keys(pair).includes(str[i])) {
+    } else {
       stack.push(str[i]);
     }
   }
